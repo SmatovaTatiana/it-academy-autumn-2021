@@ -1,37 +1,27 @@
 import re
-
 import sys
-
 import glob
-
 import unittest
-
 import csv
-
 from itertools import groupby
-
 from time import localtime
 
 # 1 line: Output
-
 print('Hello, world!')
 
 
 # 2 lines: Input, assignment
-
 name = input('What is your name?\n')
 print('Hi, %s.' % name)
 
 
 # 3 lines: For loop, built-in enumerate function, new style formatting
-
 friends = ['john', 'pat', 'gary', 'michael']
 for i, name in enumerate(friends):
     print("iteration {iteration} is {name}".format(iteration=i, name=name))
 
 
 # 4 lines: Fibonacci, tuple assignment
-
 parents, babies = (1, 1)
 while babies < 100:
     print('This generation has {0} babies'.format(babies))
@@ -39,7 +29,6 @@ while babies < 100:
 
 
 # 5 lines: Functions
-
 def greet(name1):
     print('Hello', name1)
 
@@ -50,7 +39,6 @@ greet('Bob')
 
 
 # 6 lines: Import, regular expressions
-
 for test_string in ['555-1212', 'ILLEGAL']:
     if re.match(r'^\d{3}-\d{4}$', test_string):
         print(test_string, 'is a valid US local phone number')
@@ -59,7 +47,6 @@ for test_string in ['555-1212', 'ILLEGAL']:
 
 
 # 7 lines: Dictionaries, generator expressions
-
 prices = {'apple': 0.40, 'banana': 0.50}
 my_purchase = {
     'apple': 1,
@@ -71,7 +58,6 @@ print('I owe the grocer $%.2f' % grocery_bill)
 
 # 8 lines: Command line arguments, exception handling
 # This program adds up integers that have been passed as arguments in the command line
-
 try:
     total = sum(int(arg) for arg in sys.argv[1:])
     print('sum =', total)
@@ -82,7 +68,6 @@ except ValueError:
 # 9 lines: Opening files
 # indent your Python code to put into an email
 # glob supports Unix style pathname extensions
-
 python_files = glob.glob('*.py')
 for file_name in sorted(python_files):
     print('    ------' + file_name)
@@ -95,7 +80,6 @@ for file_name in sorted(python_files):
 
 
 # 10 lines: Time, conditionals, from..import, for..else
-
 activities = {8: 'Sleeping',
               9: 'Commuting',
               17: 'Working',
@@ -115,7 +99,6 @@ else:
 
 
 # 11 lines: Triple-quoted strings, while loop
-
 REFRAIN = '''
 %d bottles of beer on the wall,
 %d bottles of beer,
@@ -130,7 +113,6 @@ while bottles_of_beer > 1:
 
 
 # 12 lines: Classes
-
 class BankAccount(object):
     def __init__(self, initial_balance=0):
         self.balance = initial_balance
@@ -151,7 +133,6 @@ print(my_account.balance, my_account.overdrawn())
 
 
 # 13 lines: Unit testing with unittest
-
 def median(pool):
     copy = sorted(pool)
     size = len(copy)
@@ -172,7 +153,6 @@ if __name__ == '__main__':
 
 
 # 14 lines: Doctest-based testing
-
 def median_1(pool):
     """Statistical median to demonstrate doctest.
 
@@ -195,7 +175,6 @@ if __name__ == '__main__':
 
 
 # 15 lines: itertools
-
 lines = '''
 This is the
 first paragraph.
@@ -213,9 +192,7 @@ for has_chars, frags in groupby(lines, bool):
 
 
 # 16 lines: csv module, tuple unpacking, cmp() built-in
-
 # need to define cmp function in Python 3
-
 def cmp(a, b):
     return (a > b) - (a < b)
 
@@ -240,7 +217,6 @@ with open('stocks.csv', 'r') as stocksFile:
 
 
 # 18 lines: 8-Queens Problem (recursion)
-
 BOARD_SIZE = 8
 
 
