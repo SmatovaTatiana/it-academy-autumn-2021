@@ -1,9 +1,9 @@
 import csv
 import glob
 from itertools import groupby
-from time import localtime
 import re
 import sys
+from time import localtime
 import unittest
 
 
