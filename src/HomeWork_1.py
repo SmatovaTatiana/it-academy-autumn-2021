@@ -1,10 +1,11 @@
-import re
-import sys
-import glob
-import unittest
 import csv
+import glob
 from itertools import groupby
 from time import localtime
+import re
+import sys
+import unittest
+
 
 # 1 line: Output
 print('Hello, world!')
