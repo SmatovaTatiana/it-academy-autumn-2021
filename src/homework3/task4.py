@@ -5,11 +5,14 @@
 # Входные данные - строка из чисел, разделенная пробелами.
 # Выходные данные - количество пар.
 # Важно: 1 1 1 - это 3 пары, 1 1 1 1 - это 6 пар
-str_ = '3 1 1 1 1 2 2 3 3'
-list_ = str_.split()
-pair_ = 0
-numbers_ = {num: list_.count(num) for num in list_}
-for element in numbers_:
-    count_ = (numbers_[element] * (numbers_[element] - 1)) / 2
-    pair_ += count_
-print(int(pair_))
+
+
+def number_of_pairs():
+    str_ = '3 1 1 1 1 2 2 3 3'
+    list_ = str_.split()
+    pair_ = 0
+    numbers_ = {num: list_.count(num) for num in list_}
+    for element in numbers_:
+        count_ = (numbers_[element] * (numbers_[element] - 1)) / 2
+        pair_ += count_
+    return print(int(pair_))
