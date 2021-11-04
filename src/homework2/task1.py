@@ -5,11 +5,13 @@
 Input: Цена одной вещи 3 рубля 20 копеек, посчитать 3 предмета.
 Output: Общая цена 9 рублей 60 копеек"""
 
-M = int(input('Введите цену, руб.:'))
-N = int(input('Введите цену, коп.:'))
-S = int(input('Введите колиечство товара:'))
-total = S * (M + (N / 100)) * 100
-rub = int(total // 100)
-cent = int(total % (total // 100 * 100))
-template = "Общая стоимость: {rub} руб. {cent} коп."
-print(template.format(rub=rub, cent=cent))
+
+def total_sum():
+    m = int(input('Введите цену, руб.:'))
+    n = int(input('Введите цену, коп.:'))
+    s = int(input('Введите колиечство товара:'))
+    total = s * (m + (n / 100)) * 100
+    rub = int(total // 100)
+    cent = int(total % (total // 100 * 100))
+    template = "Общая стоимость: {rub} руб. {cent} коп."
+    return print(template.format(rub=rub, cent=cent))
